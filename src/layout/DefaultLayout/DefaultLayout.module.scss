@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 60px; // Để không bị header che
+}
+
+.main {
+    flex: 1;
+    padding-top: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}

@@ -1,0 +1,107 @@
+.course-intro {
+    background-color: #ffffff;
+
+    &__container {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #000;
+    }
+
+    &__desc {
+        font-size: 18px;
+        margin-bottom: 24px;
+        color: #333;
+    }
+
+    &__section {
+        margin-bottom: 24px;
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #000;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+            position: relative;
+            padding-left: 20px;
+        }
+    }
+
+    &__button {
+        background: #000;
+        color: #fff;
+        padding: 12px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: #333;
+        }
+    }
+
+    &__thumbnail {
+        width: 350px;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.course-intro__thumbnail {
+    width: 350px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-intro__meta {
+        margin-top: 16px;
+        text-align: left;
+        font-size: 14px;
+        color: #000;
+        line-height: 1.6;
+        width: 100%;
+    }
+}

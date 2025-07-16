@@ -1,0 +1,136 @@
+.course-learn {
+    display: flex;
+    height: 120vh;
+
+    &__main {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    &__video {
+        background: #000;
+        height: 84vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        video {
+            width: 100%;
+            height: 84vh;
+            object-fit: contain;
+        }
+    }
+
+    &__placeholder {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__extras {
+        height: 36vh;
+        overflow-y: auto;
+        background: #f8f9fa;
+        padding: 16px;
+    }
+
+    &__sidebar {
+        flex: 1;
+        background: #ffffff;
+        padding: 20px;
+        overflow-y: auto;
+        border-left: 1px solid #dee2e6;
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 4px;
+                transition: background 0.2s;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:hover {
+                    background: #e9ecef;
+                }
+
+                &.active {
+                    background: #ced4da;
+                    font-weight: bold;
+                }
+
+                &.completed {
+                    background: #d4edda;
+                    color: #155724;
+                    font-weight: bold;
+                    border-left: 4px solid #28a745;
+
+                    &:hover {
+                        background: #c3e6cb;
+                    }
+                }
+
+                &.glow-once {
+                    animation: completed-glow 1s ease-in-out;
+                }
+
+                p {
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+            }
+        }
+    }
+}
+
+.icon-disc {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.spinning {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes completed-glow {
+    0% {
+        box-shadow: 0 0 0px #28a745;
+    }
+    50% {
+        box-shadow: 0 0 10px #28a745;
+    }
+    100% {
+        box-shadow: 0 0 0px #28a745;
+    }
+}

@@ -1,6 +1,6 @@
 // src/strore/LessonStore.ts
 
-import { lessonService } from "@/services/LessonService";
+import { lessonService } from "@/services/lessonService";
 import { create } from "zustand";
 
 export interface Lesson {
